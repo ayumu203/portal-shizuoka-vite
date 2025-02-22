@@ -1,0 +1,92 @@
+.schedule-table {
+    max-width: 90%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin: 5% auto;
+    font-size: 16px;
+    text-align: center;
+    overflow-y: auto;
+    border: 1px solid #ddd;  
+}
+  
+  .schedule-table th,
+  .schedule-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    vertical-align: middle;
+  }
+  
+  .schedule-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  .schedule-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .schedule-table tr:hover {
+    background-color: #e3f2fd;
+  }
+  
+  /* 各曜日のスタイル */
+  .schedule-table th[id^="week"] {
+    width: 10%;
+  }
+  
+  /* 時間割の見出し */
+  .schedule-table th p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  /* 科目の枠 */
+  .schedule-table td ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .schedule-table td ul li {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 8px;
+    margin: 5px 0;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .schedule-table td ul li:hover {
+    transform: scale(1.02);
+  }
+  
+  /* 科目タイトル */
+  .schedule-table td ul li h4 {
+    margin: 5px 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* 教師名 */
+  .schedule-table td ul li p {
+    margin: 2px 0;
+    font-size: 12px;
+    color: #666;
+  }
+  
+  /* 教室のスタイル */
+  .schedule-table td ul li p span {
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  /* 確定アイコン */
+  .confirm-icon {
+    color: green;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5px;
+  }
+  
