@@ -12,10 +12,10 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/schedule" element={<Schedule />}></Route>
-        <Route path="/timeTable" element={<TimeTable />}></Route>
-        <Route path="/written" element={<Written />}></Route>
+        <Route path="/portal-shizuoka-vite/" element={<Home />}></Route>
+        <Route path="/portal-shizuoka-vite/schedule" element={<Schedule />}></Route>
+        <Route path="/portal-shizuoka-vite/timeTable" element={<TimeTable />}></Route>
+        <Route path="/portal-shizuoka-vite/written" element={<Written />}></Route>
       </Routes>
     </div>
   )
