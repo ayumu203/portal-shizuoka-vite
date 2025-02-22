@@ -45,7 +45,7 @@ function Home() {
             </Box>
             <Box 
                 component="img" 
-                src="/img/home.jpg"
+                src="/portal-shizuoka-vite/img/home.jpg"
                 alt="ホームイメージ"
                 width="100%" 
                 sx={{

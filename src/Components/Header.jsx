@@ -233,7 +233,7 @@ function Header() {
     <Box sx={{ display: "flex", flexDirection: "column", alignItems: "start", width: "100%" }}>
       {/* ロゴと1つめのツールバー（横並び） */}
       <Box sx={{ display: "flex", alignItems: "center", width: "82%", maxWidth: "100%", justifyContent: "space-between", padding: "10px" }}>
-        <Logo src="/img/logo_header.svg" alt="ロゴ" />
+        <Logo src="/portal-shizuoka-vite/img/logo_header.svg" alt="ロゴ" />
         <StyledAppBar position="static">
           <StyledToolbar>
             <Typography>
