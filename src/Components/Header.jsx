@@ -256,16 +256,16 @@ function Header() {
       <FullWidthAppBar position="static">
         <StyledToolbar>
           <Typography>
-            <StyledLink to="/">🏠 トップ</StyledLink>
+            <StyledLink to="/portal-shizuoka-vite/">🏠 トップ</StyledLink>
           </Typography>
           <Typography>
-            <StyledLink to="/Schedule">🕒 時間割</StyledLink>
+            <StyledLink to="/portal-shizuoka-vite/Schedule">🕒 時間割</StyledLink>
           </Typography>
           <Typography>
-            <StyledLink to="/Timetable">⏳ 授業時間</StyledLink>
+            <StyledLink to="/portal-shizuoka-vite/Timetable">⏳ 授業時間</StyledLink>
           </Typography>
           <Typography>
-            <StyledLink to="/Written">📝 書き物</StyledLink>
+            <StyledLink to="/portal-shizuoka-vite/Written">📝 書き物</StyledLink>
           </Typography>
         </StyledToolbar>
       </FullWidthAppBar>
