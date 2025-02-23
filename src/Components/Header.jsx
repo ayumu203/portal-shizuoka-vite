@@ -3,6 +3,7 @@ import { AppBar, Box, Toolbar, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import { styled } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { Sidebar } from "./Sidebar";
 
 // スタイル定義
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
@@ -74,6 +75,7 @@ function Header() {
               <Typography>
                 <StyledLink target="_blank" to="https://ayumu203.github.io/portal-shizuoka/img/map.jpg">🌍 学内マップ</StyledLink>
               </Typography>
+              <Sidebar></Sidebar>
             </StyledToolbar>
           </StyledAppBar>
         </Box>
@@ -94,6 +96,7 @@ function Header() {
             <Typography>
               <StyledLink target="_blank" to="https://ayumu203.github.io/portal-shizuoka/img/map.jpg">🌍 学内マップ</StyledLink>
             </Typography>
+            <Sidebar></Sidebar>
           </StyledToolbar>
         </StyledAppBar>
       </Box>
