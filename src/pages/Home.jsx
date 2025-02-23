@@ -1,18 +1,3 @@
-// import { Box, Typography } from "@mui/material";
-
-// function Home() {
-//     return(
-//         <Box mt={10}>
-//             <Box>
-//                 <Typography textAlign={"center"} fontSize={"150%"}>主に作成者が使うために作ったポータルサイトです.</Typography>
-//                 <Typography textAlign={"center"} fontSize={"150%"}>使ってくれてもええんやで.</Typography>
-//             </Box>
-//             <img width={"100%"} src="/img/home.jpg"></img>
-//         </Box>
-//     );
-//   }
-  
-// export default Home;
 import React from "react";
 import { Box, Typography } from "@mui/material";
 
@@ -36,11 +21,19 @@ function Home() {
                 </Typography>
                 <Typography 
                     textAlign="center" 
-                    fontSize="1.4rem" 
+                    fontSize="1.2rem" 
                     color="#5A3E2B"
                     fontWeight="bold"
                 >
                     ChatgptがほとんどのUIを書いてくれました(悲).
+                </Typography>
+                <Typography 
+                    textAlign="center" 
+                    fontSize="1.2rem" 
+                    color="#5A3E2B"
+                    fontWeight="bold"
+                >
+                    時間割の使い方は「書き物」 → 「README」に記載.
                 </Typography>
             </Box>
             <Box 
