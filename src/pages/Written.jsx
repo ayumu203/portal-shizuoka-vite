@@ -70,21 +70,6 @@
                         まだないよ
                     </Link>
                     <br></br>
-                    <Link 
-                        to="https://hackmd.io/@pnbGNoGSQKSqgirShq4Y-A/H1Ch75vq1x" 
-                        target="_blank"
-                        style={{ color: "#8D6E63", textDecoration: "none" }}
-                    >
-                        まだないよ
-                    </Link>
-                    <br></br>
-                    <Link 
-                        to="https://hackmd.io/@pnbGNoGSQKSqgirShq4Y-A/H1Ch75vq1x" 
-                        target="_blank"
-                        style={{ color: "#8D6E63", textDecoration: "none" }}
-                    >
-                        まだないよ
-                    </Link>
                 </Box>
             </Box>
         );

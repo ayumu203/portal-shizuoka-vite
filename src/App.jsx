@@ -5,7 +5,7 @@ import { TimeTable } from "./pages/TimeTable"
 import { Schedule } from "./pages/Schedule"
 import Header from "./Components/Header"
 import Written from "./pages/Written"
-
+import "./App.css"
 
 function App() {
 
