@@ -35,7 +35,6 @@ export const Schedule = () =>{
 
     const handleClearLocalstorage = () => {
         localStorage.clear();
-        window.location.reload();
     }
 
     return(
@@ -90,6 +89,7 @@ export const Schedule = () =>{
                         }
                     }}
                     onClick={handleClearLocalstorage}
+                    href="https://ayumu203.github.io/portal-shizuoka-vite/"
                 >
                     時間割データを削除
                 </Button>
