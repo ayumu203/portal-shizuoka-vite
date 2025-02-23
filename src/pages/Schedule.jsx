@@ -93,7 +93,7 @@ export const Schedule = () =>{
                 >
                     時間割データを削除
                 </Button>
-                <Box maxHeight={"90%"}>{scheduleTableData}</Box>
+                <Box>{scheduleTableData}</Box>
             </>
             }
         </Box>

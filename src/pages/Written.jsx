@@ -24,6 +24,7 @@
     function Written() {
         return (
             <Box sx={{
+                backgroundColor:"FFFFCC",
                 display: "flex",
                 justifyContent:"flex-start",
                 flexDirection: "column",
@@ -34,6 +35,7 @@
             }}>
                 {/* README */}
                 <Box sx={{
+                    backgroundColor:"#FFFFF0",
                     border: "1px solid #D7CCC8", // やわらかいベージュ色の枠
                     borderRadius: 2,
                     p: 2
@@ -52,6 +54,7 @@
     
                 {/* 旅行記 */}
                 <Box sx={{
+                    backgroundColor:"#FFFFF0",
                     border: "1px solid #D7CCC8",
                     borderRadius: 2,
                     p: 2
