@@ -14,6 +14,7 @@ export const Sidebar = () => {
             <List>
                 {[
                     { title: "AtCoder", link: "https://atcoder.jp/?lang=ja" },
+                    { title: "AtCoder Problems", link:"https://kenkoooo.com/atcoder/#/table/"}
                 ].map((item) => (
                     <ListItem sx={{backgroundColor:"#42A5F5",mb:3}} key={item.title} disablePadding>
                         <ListItemButton component="a" href={item.link} target="_blank">
