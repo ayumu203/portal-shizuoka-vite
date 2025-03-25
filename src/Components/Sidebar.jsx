@@ -13,8 +13,12 @@ export const Sidebar = () => {
         <Box sx={{ backgroundColor: "white",color:"#efefef" ,width:  isMobile ? 200 : 300}} onClick={toggleDrawer(false)}>
             <List>
                 {[
+                    { title:"GitHub", link:"https://github.com/" },
+                    { title:"HackMD", link:"https://hackmd.io/" },
+                    { title:"Yahoo乗り換え", link:"https://transit.yahoo.co.jp/" },
                     { title: "AtCoder", link: "https://atcoder.jp/?lang=ja" },
-                    { title: "AtCoder Problems", link:"https://kenkoooo.com/atcoder/#/table/"}
+                    { title: "AtCoder Problems", link:"https://kenkoooo.com/atcoder/#/table/"},
+		    { title:"時間割",link:"https://wwp.shizuoka.ac.jp/acad-affairs-portal/student_e/inf"  }
                 ].map((item) => (
                     <ListItem sx={{backgroundColor:"#42A5F5",mb:3}} key={item.title} disablePadding>
                         <ListItemButton component="a" href={item.link} target="_blank">
