@@ -1,8 +1,16 @@
-# React + Vite
+# README
+* 作成者:arm
+* 情報学部情報科学科所属
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# なんのサイト?
+大学で使用する頻度の高いサイトへのリンク・時間割等をまとめたサイト.
+暇つぶしに書いた旅行記とかも「書き物」にそのうちおくかも.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# 時間割に関して
+### 使用方法
+1. 学情システム
+「履修登録」$\rightarrow$「時間割の部分で右クリック」 $\rightarrow$ 「名前をつけて保存」$\rightarrow$ 「ダウンロード終了」
+2. このサイト
+「ファイルをアップロードをクリック」 $\rightarrow$ 「1.でダウンロードしたファイルを選択」$\rightarrow$ 「完了」
+### <font color="red">注意事項</font>
+スマホ版で1.の操作を行っても正しくデータを取得できないため,スマホで時間割を登録する場合はパソコンから保存したデータをダウンロードして使用してください.
