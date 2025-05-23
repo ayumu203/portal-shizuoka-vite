@@ -2,7 +2,7 @@
 * 作成者:arm
 * 情報学部情報科学科所属
 
-# リンク
+# 公開先リング
 https://ayumu203.github.io/portal-shizuoka-vite/ 
 
 # なんのサイト?
