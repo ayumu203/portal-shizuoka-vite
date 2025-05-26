@@ -29,10 +29,24 @@ export const Todo = () => {
     }, []);
 
     // todosが変更されたらローカルストレージに保存
-    useEffect(() => {
-        localStorage.setItem(TODO_STORAGE_KEY, JSON.stringify(todos));
-    }, [todos]);
+    // ... (他のimportやuseStateはそのまま)
 
+    // todosが変更されたらローカルストレージに保存
+    useEffect(() => {
+        console.log('[Effect Save] Attempting to save todos to localStorage. Current todos:', todos);
+        try {
+            localStorage.setItem(TODO_STORAGE_KEY, JSON.stringify(todos));
+            // 保存直後に実際に保存された値もログに出力してみる
+            const savedValue = localStorage.getItem(TODO_STORAGE_KEY);
+            console.log('[Effect Save] Todos saved to localStorage for key "' + TODO_STORAGE_KEY + '". Value in localStorage:', savedValue);
+        } catch (e) {
+            console.error('[Effect Save] Error saving todos to localStorage for key "' + TODO_STORAGE_KEY + '":', e);
+            // ユーザーにエラーを通知することも検討
+            alert('Todoアイテムの保存に失敗しました。ローカルストレージが利用できないか、容量がいっぱいの可能性があります。エラーの詳細はコンソールを確認してください。');
+        }
+    }, [todos]); // todosが変更されるたびに実行されます
+
+    // ... (読み込み処理のuseEffectや他の関数、return文はそのまま)
     const handleAddTodo = () => {
         if (inputText.trim() === '' || dueDate === '') {
             alert('内容と締切日を入力してください。');
@@ -162,47 +176,47 @@ export const Todo = () => {
                                 </TableRow>
                             ) : (
                                 todos.sort((a, b) => new Date(a.dueDate) - new Date(b.dueDate)) // 締切日でソート
-                                     .map((todo) => (
-                                    <TableRow
-                                        key={todo.id}
-                                        sx={{
-                                            backgroundColor: todo.important ? "#FFF9C4" : // 重要なら薄い黄色
-                                                (todo.completed ? "#E0E0E0" : // 完了なら薄いグレー
-                                                    ( (idx) => idx % 2 === 1 ? "#E8F5E9" : "inherit" )(todos.indexOf(todo)) // 通常の偶数行 (インデックスベースで再計算)
-                                                ),
-                                            "&:hover": { backgroundColor: "#A5D6A7", transform: "scale(1.01)" },
-                                            transition: "background-color 0.3s, transform 0.2s",
-                                            opacity: todo.completed ? 0.7 : 1,
-                                        }}
-                                    >
-                                        <TableCell sx={{ color: "#4E342E" }}>
-                                            <Checkbox
-                                                checked={todo.completed}
-                                                onChange={() => handleToggleComplete(todo.id)}
-                                                sx={{
-                                                    color: "#4CAF50", // グリーン
-                                                    '&.Mui-checked': {
-                                                        color: "#2E7D32", // 濃いグリーン
-                                                    },
-                                                }}
-                                            />
-                                        </TableCell>
-                                        <TableCell sx={{
-                                            color: "#4E342E",
-                                            textDecoration: todo.completed ? "line-through" : "none",
-                                            fontWeight: todo.important ? "bold" : "normal",
-                                        }}>
-                                            {todo.text}
-                                        </TableCell>
-                                        <TableCell sx={{ color: "#4E342E" }}>{todo.createdAt}</TableCell>
-                                        <TableCell sx={{ color: "#4E342E" }}>{todo.dueDate}</TableCell>
-                                        <TableCell sx={{ color: "#4E342E", textAlign: 'center' }}>
-                                            <IconButton onClick={() => handleDeleteTodo(todo.id)} aria-label="delete" sx={{ color: "#D32F2F" }}>
-                                                <DeleteIcon />
-                                            </IconButton>
-                                        </TableCell>
-                                    </TableRow>
-                                ))
+                                    .map((todo) => (
+                                        <TableRow
+                                            key={todo.id}
+                                            sx={{
+                                                backgroundColor: todo.important ? "#FFF9C4" : // 重要なら薄い黄色
+                                                    (todo.completed ? "#E0E0E0" : // 完了なら薄いグレー
+                                                        ((idx) => idx % 2 === 1 ? "#E8F5E9" : "inherit")(todos.indexOf(todo)) // 通常の偶数行 (インデックスベースで再計算)
+                                                    ),
+                                                "&:hover": { backgroundColor: "#A5D6A7", transform: "scale(1.01)" },
+                                                transition: "background-color 0.3s, transform 0.2s",
+                                                opacity: todo.completed ? 0.7 : 1,
+                                            }}
+                                        >
+                                            <TableCell sx={{ color: "#4E342E" }}>
+                                                <Checkbox
+                                                    checked={todo.completed}
+                                                    onChange={() => handleToggleComplete(todo.id)}
+                                                    sx={{
+                                                        color: "#4CAF50", // グリーン
+                                                        '&.Mui-checked': {
+                                                            color: "#2E7D32", // 濃いグリーン
+                                                        },
+                                                    }}
+                                                />
+                                            </TableCell>
+                                            <TableCell sx={{
+                                                color: "#4E342E",
+                                                textDecoration: todo.completed ? "line-through" : "none",
+                                                fontWeight: todo.important ? "bold" : "normal",
+                                            }}>
+                                                {todo.text}
+                                            </TableCell>
+                                            <TableCell sx={{ color: "#4E342E" }}>{todo.createdAt}</TableCell>
+                                            <TableCell sx={{ color: "#4E342E" }}>{todo.dueDate}</TableCell>
+                                            <TableCell sx={{ color: "#4E342E", textAlign: 'center' }}>
+                                                <IconButton onClick={() => handleDeleteTodo(todo.id)} aria-label="delete" sx={{ color: "#D32F2F" }}>
+                                                    <DeleteIcon />
+                                                </IconButton>
+                                            </TableCell>
+                                        </TableRow>
+                                    ))
                             )}
                         </TableBody>
                     </Table>

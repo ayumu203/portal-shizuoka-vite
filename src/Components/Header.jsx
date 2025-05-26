@@ -120,6 +120,9 @@ function Header() {
           <Typography>
             <StyledLink to="/portal-shizuoka-vite/Written">📝 書き物</StyledLink>
           </Typography>
+          <Typography>
+            <StyledLink to="/portal-shizuoka-vite/Todo">📅 Todo</StyledLink>
+          </Typography>
         </StyledToolbar>
       </FullWidthAppBar>
     </Box>
