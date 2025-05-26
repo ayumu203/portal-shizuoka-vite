@@ -6,6 +6,7 @@ import { Schedule } from "./pages/Schedule"
 import Header from "./Components/Header"
 import Written from "./pages/Written"
 import "./App.css"
+import { Todo } from "./pages/Todo"
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/portal-shizuoka-vite/Schedule" element={<Schedule />}></Route>
         <Route path="/portal-shizuoka-vite/TimeTable" element={<TimeTable />}></Route>
         <Route path="/portal-shizuoka-vite/Written" element={<Written />}></Route>
+        <Route path="/portal-shizuoka-vite/Todo" element={<Todo />}></Route>
       </Routes>
     </div>
   )
