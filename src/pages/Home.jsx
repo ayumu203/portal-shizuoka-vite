@@ -25,7 +25,7 @@ function Home() {
                     color="#5A3E2B"
                     fontWeight="bold"
                 >
-                    ChatgptがほとんどのUIを書いてくれました(悲).
+                    hogehoge
                 </Typography>
                 <Typography 
                     textAlign="center" 
